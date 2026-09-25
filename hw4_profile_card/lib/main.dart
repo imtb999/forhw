@@ -65,10 +65,10 @@ class _ProfilePageState extends State<ProfilePage> {
                   children: [
                     const CircleAvatar(
                       radius: 48,
-                      child: Text('AL', style: TextStyle(fontSize: 32)),
+                      child: Text('TB', style: TextStyle(fontSize: 32)),
                     ),
                     const SizedBox(height: 20),
-                    const Text('Alex Lee',
+                    const Text('Temirlan Baidash',
                       style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
                     const Text('@alexcreates'),
                     const SizedBox(height: 12),
