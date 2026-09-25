@@ -70,7 +70,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     const SizedBox(height: 20),
                     const Text('Temirlan Baidash',
                       style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-                    const Text('@alexcreates'),
+                    const Text('@imtb'),
                     const SizedBox(height: 12),
                     const Text('Designer. Explorer. Coffee enthusiast.',
                       textAlign: TextAlign.center),
