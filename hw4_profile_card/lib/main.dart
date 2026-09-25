@@ -40,7 +40,13 @@ class _ProfilePageState extends State<ProfilePage> {
       likes += isLiked ? 1 : -1;
     });
   }
-  void reset() {}
+  void reset() {
+    setState(() {
+      isFollowing = false;
+      isLiked = false;
+      likes = 128;
+    });
+  }
 
   @override
   Widget build(BuildContext context) => Scaffold(
