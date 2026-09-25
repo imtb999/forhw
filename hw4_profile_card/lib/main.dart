@@ -29,7 +29,11 @@ class _ProfilePageState extends State<ProfilePage> {
   bool isLiked = false;
   int likes = 128;
 
-  void toggleFollow() {}
+  void toggleFollow() {
+    setState(() {
+      isFollowing = !isFollowing;
+    });
+  }
   void toggleLike() {}
   void reset() {}
 
