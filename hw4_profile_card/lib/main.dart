@@ -34,7 +34,12 @@ class _ProfilePageState extends State<ProfilePage> {
       isFollowing = !isFollowing;
     });
   }
-  void toggleLike() {}
+  void toggleLike() {
+    setState(() {
+      isLiked = !isLiked;
+      likes += isLiked ? 1 : -1;
+    });
+  }
   void reset() {}
 
   @override
