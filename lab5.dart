@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Run with: flutter run -t lib/lab5.dart
+// Run from hw4_profile_card: flutter run -t ../lab5.dart
 void main() => runApp(const Lab5App());
 
 class Lab5App extends StatelessWidget {
