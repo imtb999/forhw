@@ -34,3 +34,19 @@ const sampleProduct = Product(
   categories: ['Sneakers', 'Lifestyle', 'Unisex'],
   sizes: [38, 39, 40, 41, 42, 43, 44, 45],
 );
+
+const demoProducts = [
+  sampleProduct,
+  Product(
+    name: 'Cloud Runner',
+    price: 62990,
+    rating: 4.7,
+    reviewCount: 86,
+    imagePath: 'assets/images/sneaker_light.jpg',
+    description:
+        'An easy everyday pair with a fresh, light look. '
+        'Choose your fit and bring a little more comfort to your daily routine.',
+    categories: ['Sneakers', 'Running', 'Unisex'],
+    sizes: [39, 40, 41, 42, 43, 44],
+  ),
+];
