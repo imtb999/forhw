@@ -9,7 +9,7 @@ void main() {
     await tester.pumpWidget(const ProfileApp());
     expect(find.text('Follow'), findsOneWidget);
     expect(find.text('2400'), findsOneWidget);
-    expect(find.text('Like · 128'), findsOneWidget);
+    expect(find.text('128'), findsOneWidget);
 
     await tester.tap(find.text('Follow'));
     await tester.pump();
@@ -19,22 +19,25 @@ void main() {
     await tester.pump();
     expect(find.text('2400'), findsOneWidget);
 
-    await tester.tap(find.text('Like · 128'));
+    await tester.tap(find.text('Like'));
+    await tester.tap(find.text('Like'));
     await tester.pump();
-    expect(find.text('Liked · 129'), findsOneWidget);
-    await tester.tap(find.text('Liked · 129'));
+    expect(find.text('130'), findsOneWidget);
+    await tester.tap(find.text('Dislike'));
+    await tester.tap(find.text('Dislike'));
+    await tester.tap(find.text('Dislike'));
     await tester.pump();
-    expect(find.text('Like · 128'), findsOneWidget);
+    expect(find.text('127'), findsOneWidget);
 
     await tester.tap(find.text('Follow'));
-    await tester.tap(find.text('Like · 128'));
+    await tester.tap(find.text('Like'));
     await tester.pump();
     await tester.ensureVisible(find.text('Reset'));
     await tester.tap(find.text('Reset'));
     await tester.pump();
     expect(find.text('Follow'), findsOneWidget);
     expect(find.text('2400'), findsOneWidget);
-    expect(find.text('Like · 128'), findsOneWidget);
+    expect(find.text('128'), findsOneWidget);
   });
 
   testWidgets('Fits a small phone without layout overflow', (tester) async {

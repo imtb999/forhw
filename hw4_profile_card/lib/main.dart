@@ -26,7 +26,6 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   bool isFollowing = false;
-  bool isLiked = false;
   int likes = 128;
 
   void toggleFollow() {
@@ -34,16 +33,19 @@ class _ProfilePageState extends State<ProfilePage> {
       isFollowing = !isFollowing;
     });
   }
-  void toggleLike() {
+  void like() {
     setState(() {
-      isLiked = !isLiked;
-      likes += isLiked ? 1 : -1;
+      likes++;
+    });
+  }
+  void dislike() {
+    setState(() {
+      likes--;
     });
   }
   void reset() {
     setState(() {
       isFollowing = false;
-      isLiked = false;
       likes = 128;
     });
   }
@@ -85,10 +87,26 @@ class _ProfilePageState extends State<ProfilePage> {
                       label: Text(isFollowing ? 'Following' : 'Follow'),
                     ),
                     const SizedBox(height: 8),
-                    OutlinedButton.icon(
-                      onPressed: toggleLike,
-                      icon: Icon(isLiked ? Icons.favorite : Icons.favorite_border),
-                      label: Text('${isLiked ? 'Liked' : 'Like'} · $likes'),
+                    Text('$likes',
+                      style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                    const Text('Likes'),
+                    const SizedBox(height: 8),
+                    Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 8,
+                      runSpacing: 8,
+                      children: [
+                        OutlinedButton.icon(
+                          onPressed: like,
+                          icon: const Icon(Icons.thumb_up_outlined),
+                          label: const Text('Like'),
+                        ),
+                        OutlinedButton.icon(
+                          onPressed: dislike,
+                          icon: const Icon(Icons.thumb_down_outlined),
+                          label: const Text('Dislike'),
+                        ),
+                      ],
                     ),
                     const SizedBox(height: 8),
                     TextButton.icon(
