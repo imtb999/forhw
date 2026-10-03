@@ -17,7 +17,10 @@ double processOrder({
   final double priceAfterDiscount = itemPrice - discount;
 
   // 2. Delivery fee: null defaults to 500.0 ₸ via ??
-  final double fee = deliveryFee ?? defaultDeliveryFee;
+  double fee = deliveryFee ?? defaultDeliveryFee;
+  if (fee < 1000.0) {
+    fee = 1000; 
+  }
 
   // 3. Final total
   final double total = priceAfterDiscount + fee;

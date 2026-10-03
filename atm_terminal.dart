@@ -110,6 +110,6 @@ void main() {
 
   // Demonstrating the ! (null assertion) operator
   double? bonus = 50.0;
-  balance = deposit(currentBalance: balance, amount: bonus!);
+  balance = deposit(currentBalance: balance, amount: bonus);
   checkBalance(name: userName, balance: balance);
 }
