@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../models/product.dart';
+import '../models/user_profile.dart';
 import '../widgets/product_card.dart';
 import 'product_screen.dart';
 
 class CatalogScreen extends StatefulWidget {
-  const CatalogScreen({super.key});
+  const CatalogScreen({super.key, this.profile});
+
+  final UserProfile? profile;
 
   @override
   State<CatalogScreen> createState() => _CatalogScreenState();
@@ -32,6 +35,17 @@ class _CatalogScreenState extends State<CatalogScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  if (widget.profile != null) ...[
+                    Text(
+                      'Welcome, ${widget.profile!.fullName}!',
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(widget.profile!.role),
+                    const SizedBox(height: 20),
+                  ],
                   const Text(
                     'FIND YOUR NEXT PAIR',
                     style: TextStyle(letterSpacing: 2, color: Colors.brown),

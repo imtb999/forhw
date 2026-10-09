@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lab5_sneaker_store/main.dart';
-import 'package:lab5_sneaker_store/screens/catalog_screen.dart';
+import 'package:lab6_registration/main.dart';
+import 'package:lab6_registration/screens/catalog_screen.dart';
 
 Finder field(String key) => find.byKey(Key(key));
 Finder get confirmation => find.byType(TextFormField).at(3);

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:lab5_sneaker_store/main.dart';
-import 'package:lab5_sneaker_store/widgets/product_card.dart';
+import 'package:lab6_registration/screens/catalog_screen.dart';
+import 'package:lab6_registration/widgets/product_card.dart';
 
 void main() {
   testWidgets('Catalog filters and return navigation work', (tester) async {
-    await tester.pumpWidget(const SneakerStoreApp());
+    await tester.pumpWidget(const MaterialApp(home: CatalogScreen()));
     await tester.pumpAndSettle();
     expect(find.byType(ProductCard), findsNWidgets(2));
     await tester.tap(find.widgetWithText(ChoiceChip, 'Running'));
@@ -41,7 +41,7 @@ void main() {
         addTearDown(tester.view.resetDevicePixelRatio);
         tester.platformDispatcher.textScaleFactorTestValue = scale;
         addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
-        await tester.pumpWidget(const SneakerStoreApp());
+        await tester.pumpWidget(const MaterialApp(home: CatalogScreen()));
         await tester.pumpAndSettle();
         expect(tester.takeException(), isNull);
         await tester.ensureVisible(find.text('Nike Air Everyday'));
@@ -75,7 +75,7 @@ void main() {
   }
 
   testWidgets('Bookmark, size selection and cart work', (tester) async {
-    await tester.pumpWidget(const SneakerStoreApp());
+    await tester.pumpWidget(const MaterialApp(home: CatalogScreen()));
     await tester.pumpAndSettle();
     await tester.ensureVisible(find.text('Nike Air Everyday'));
     await tester.tap(find.text('Nike Air Everyday'));
