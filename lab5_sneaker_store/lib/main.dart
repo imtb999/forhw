@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/catalog_screen.dart';
+import 'screens/registration_screen.dart';
 
 void main() {
   runApp(const SneakerStoreApp());
@@ -19,7 +19,7 @@ class SneakerStoreApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFFFAF8F5),
         useMaterial3: true,
       ),
-      home: const CatalogScreen(),
+      home: const RegistrationScreen(),
     );
   }
 }
