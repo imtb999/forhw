@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/product.dart';
 import '../widgets/product_card.dart';
 import 'product_screen.dart';
+import 'day_match_screen.dart';
 
 class CatalogScreen extends StatefulWidget {
   const CatalogScreen({super.key});
@@ -44,6 +45,19 @@ class _CatalogScreenState extends State<CatalogScreen> {
                   const SizedBox(height: 12),
                   const Text(
                     'Explore sneakers, pick your size and make them yours.',
+                  ),
+                  const SizedBox(height: 16),
+                  FilledButton.icon(
+                    icon: const Icon(Icons.auto_awesome),
+                    label: const Text(
+                      'Find my pair for today',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (_) => const DayMatchScreen(),
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 24),
                   Wrap(

@@ -4,7 +4,7 @@ A Flutter sneaker browsing app for students and young shoppers who want to compa
 
 ## MVP
 
-- Discovery screen with two product cards and working All / Lifestyle / Running filters.
+- Discovery screen with five product cards and working All / Lifestyle / Running filters.
 - Tap a card to open its detail screen. Use the back arrow to return to the catalog.
 - Detail screen with a photo, bookmark, rating, price, tags and selectable EU sizes.
 - Add to Cart is enabled after selecting a size and updates a demo counter.
@@ -62,7 +62,7 @@ flutter test
 flutter build ios --simulator --debug
 ```
 
-The analyzer passes and all 12 widget tests pass. They cover catalog filters, navigation to both products and back, bookmark toggling, size selection, cart updates, and a sticky action bar. Layout tests cover widths of 280, 320, 390, 844 and 1440 pixels, portrait/landscape and 1x/2x text scaling.
+The analyzer passes and all 17 tests pass. They cover catalog filters, navigation to both products and back, bookmark toggling, size selection, cart updates, and a sticky action bar. Layout tests cover widths of 280, 320, 390, 844 and 1440 pixels, portrait/landscape and 1x/2x text scaling.
 
 The iOS debug build also succeeds. The app was installed and launched on the iPhone 17 Pro simulator (iOS 26.5). Manual checks confirmed category filtering, product navigation, bookmark toggling, size selection and a cart increment.
 
@@ -82,3 +82,14 @@ Photos are bundled locally from Unsplash:
 
 - [Red sneaker](https://images.unsplash.com/photo-1542291026-7eec264c27ff)
 - [Light sneaker](https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb)
+
+
+## Feature: Your day. Your pair.
+
+Tap **Find my pair for today** in the catalog. Choose Campus, Walk or Workout and move the budget slider. The recommendation updates immediately, explains the activity match and shows how much budget remains. Tap the suggested card to open its details.
+
+Matching uses explicit demo activity tags, only considers affordable products, and ranks by rating (lower price breaks ties). If nothing fits, it shows an honest no-match message. No API, AI model or internet is required. The five demo products reuse illustrative photos; their tags, prices and ratings are sample data, not verified product performance claims.
+
+Defense example: choose Workout at 60000 tenge to get Training Start, increase to 65000 to get Cloud Runner, then reduce to 20000 to demonstrate the no-match state.
+
+Implementation: `lib/screens/day_match_screen.dart` uses StatefulWidget/setState; `lib/services/day_match.dart` contains the matching rules. LAB 6 remains a separate unchanged project.

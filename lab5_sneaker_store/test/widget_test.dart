@@ -7,10 +7,10 @@ void main() {
   testWidgets('Catalog filters and return navigation work', (tester) async {
     await tester.pumpWidget(const SneakerStoreApp());
     await tester.pumpAndSettle();
-    expect(find.byType(ProductCard), findsNWidgets(2));
+    expect(find.byType(ProductCard), findsNWidgets(5));
     await tester.tap(find.widgetWithText(ChoiceChip, 'Running'));
     await tester.pumpAndSettle();
-    expect(find.byType(ProductCard), findsOneWidget);
+    expect(find.byType(ProductCard), findsNWidgets(2));
     expect(find.text('Nike Air Everyday'), findsNothing);
     await tester.ensureVisible(find.text('Cloud Runner'));
     await tester.tap(find.text('Cloud Runner'));
@@ -18,10 +18,10 @@ void main() {
     expect(find.text('62990 ₸'), findsOneWidget);
     await tester.pageBack();
     await tester.pumpAndSettle();
-    expect(find.byType(ProductCard), findsOneWidget);
+    expect(find.byType(ProductCard), findsNWidgets(2));
     await tester.tap(find.widgetWithText(ChoiceChip, 'All'));
     await tester.pumpAndSettle();
-    expect(find.byType(ProductCard), findsNWidgets(2));
+    expect(find.byType(ProductCard), findsNWidgets(5));
   });
 
   for (final size in [
