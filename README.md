@@ -4,6 +4,7 @@
 | --- | --- | --- |
 | LAB 5 / Milestone 1 | [lab5_sneaker_store](lab5_sneaker_store) | Responsive sneaker catalog and product detail screen |
 | LAB 6 | [lab6_registration](lab6_registration) | Registration, live form validation, role selection and navigation to the catalog |
+| LAB 7 | [lab7_navigation](lab7_navigation) | BottomNavigationBar tabs, detail screen with arguments, Navigator.push / pop |
 
 Each folder is a separate Flutter project with its own README. Open the assignment folder in VS Code, run `flutter pub get`, select a device and press F5.
 
