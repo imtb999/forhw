@@ -50,3 +50,7 @@ Tests: `flutter test`
 3. Open **Cloud Runner**, save it with the heart in the AppBar, go back with the AppBar arrow.
 4. Open the **Favorites** tab - both items are there, the badge shows 2.
 5. Open **Profile**, turn on dark mode, return to Feed - everything is still saved.
+
+## Screen recording
+
+[docs/lab7_demo.mp4](docs/lab7_demo.mp4) - iPhone 17 Pro simulator, 35 s: Feed -> detail -> Add to favorites -> Back to list, Cloud Runner saved via AppBar heart -> AppBar back, Favorites tab (badge 2), Profile dark mode, Feed -> detail -> back.
