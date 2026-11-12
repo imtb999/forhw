@@ -1,0 +1,17 @@
+name: lab10_cloud_product_explorer
+description: "LAB 10: Cloud Product Explorer with HTTP, Hero and a detail carousel."
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: ^3.13.3
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  provider: ^6.1.5+1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true
