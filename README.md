@@ -7,8 +7,8 @@
 | LAB 7 | [lab7_navigation](lab7_navigation) | BottomNavigationBar tabs, detail screen with arguments, Navigator.push / pop |
 | LAB 8 | [lab8_catalog_feed](lab8_catalog_feed) | ListView.separated / GridView.builder, Pull-to-Refresh, Swipe-to-Delete with UNDO, empty state |
 | LAB 9 | [lab9_global_cart](lab9_global_cart) | Global cart with Provider + ChangeNotifier, live AppBar badge, Cart screen with remove/UNDO, total and Clear All |
-
 | LAB 10 | [lab10_cloud_product_explorer](lab10_cloud_product_explorer) | Live HTTP catalog, retry and refresh, Hero detail carousel and share deep link sheet |
+| LAB 11 | [lab11_offline_vault](lab11_offline_vault) | SharedPreferences theme pre-load, username persistence, JSON-serialized notes with add/toggle/delete and cold restart survival |
 
 Each folder is a separate Flutter project with its own README. Open the assignment folder in VS Code, run `flutter pub get`, select a device and press F5.
 
