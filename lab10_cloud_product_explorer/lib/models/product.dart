@@ -42,7 +42,16 @@ class Product {
     );
   }
 
-  // Fake Store prices are in USD, so keep the API currency.
   String get formattedPrice => formatPrice(price);
-  static String formatPrice(double amount) => '\$${amount.toStringAsFixed(2)}';
+
+  // 54990.0 -> "54 990 ₸"
+  static String formatPrice(double amount) {
+    final digits = amount.round().toString();
+    final buffer = StringBuffer();
+    for (var i = 0; i < digits.length; i++) {
+      if (i > 0 && (digits.length - i) % 3 == 0) buffer.write(' ');
+      buffer.write(digits[i]);
+    }
+    return '$buffer ₸';
+  }
 }

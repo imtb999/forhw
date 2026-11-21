@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Nike Air Everyday",
+    "price": 54990,
+    "description": "Everyday lifestyle sneaker with a breathable mesh upper, soft foam midsole and a durable rubber outsole. Easy to pair with jeans or joggers.",
+    "category": "Lifestyle",
+    "image": "https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/images/sneaker.jpg",
+    "rating": {
+      "rate": 4.8,
+      "count": 214
+    }
+  },
+  {
+    "id": 2,
+    "title": "Cloud Runner",
+    "price": 47990,
+    "description": "Lightweight daily trainer with cushioned cloud foam for long easy runs and a reflective heel for evening workouts.",
+    "category": "Running",
+    "image": "https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/images/sneaker_light.jpg",
+    "rating": {
+      "rate": 4.5,
+      "count": 163
+    }
+  },
+  {
+    "id": 3,
+    "title": "Ocean Flyknit",
+    "price": 62990,
+    "description": "Sock-like knit upper that adapts to your foot, responsive midsole and a grippy outsole for city roads.",
+    "category": "Running",
+    "image": "https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/images/sneaker_blue.jpg",
+    "rating": {
+      "rate": 4.7,
+      "count": 189
+    }
+  },
+  {
+    "id": 4,
+    "title": "Forest Trail",
+    "price": 69990,
+    "description": "Trail shoe with aggressive lugs, a protective toe cap and water-repellent upper for forest paths and light hiking.",
+    "category": "Outdoor",
+    "image": "https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/images/sneaker_green.jpg",
+    "rating": {
+      "rate": 4.4,
+      "count": 97
+    }
+  },
+  {
+    "id": 5,
+    "title": "Tempo Racer",
+    "price": 58990,
+    "description": "Fast tempo shoe with a stiff plate feel, low weight and a snug lockdown for intervals and race day.",
+    "category": "Running",
+    "image": "https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/images/sneaker_orange.jpg",
+    "rating": {
+      "rate": 4.6,
+      "count": 142
+    }
+  },
+  {
+    "id": 6,
+    "title": "Night Sprint",
+    "price": 44990,
+    "description": "Budget-friendly running shoe with bright reflective details, padded collar and stable heel counter.",
+    "category": "Running",
+    "image": "https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/images/sneaker_purple.jpg",
+    "rating": {
+      "rate": 4.3,
+      "count": 118
+    }
+  },
+  {
+    "id": 7,
+    "title": "Sky Breeze",
+    "price": 51990,
+    "description": "Pastel lifestyle sneaker with a soft suede overlay, cushioned insole and a clean minimal silhouette.",
+    "category": "Lifestyle",
+    "image": "https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/images/sneaker_light_blue.jpg",
+    "rating": {
+      "rate": 4.5,
+      "count": 76
+    }
+  },
+  {
+    "id": 8,
+    "title": "Lagoon Court",
+    "price": 66990,
+    "description": "Court shoe with high ankle support, impact cushioning in the heel and a herringbone pattern for sharp cuts.",
+    "category": "Basketball",
+    "image": "https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/images/sneaker_teal.jpg",
+    "rating": {
+      "rate": 4.6,
+      "count": 88
+    }
+  }
+]

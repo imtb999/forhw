@@ -1,6 +1,6 @@
 # LAB 10 - Cloud Product Explorer & Detail Carousel
 
-Continuation of LAB 9: the red Material 3 theme, shared Provider cart, badge, remove/UNDO and total are kept. The local sneaker catalog is replaced by live products from https://fakestoreapi.com/products.
+Continuation of LAB 9: the red Material 3 theme, shared Provider cart, badge, remove/UNDO and total are kept. The local sneaker catalog is moved to the network: the same sneakers are served as JSON from this repository (`api/products.json` + `api/images/`) and loaded over HTTP from https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/products.json.
 
 ## Run
 
@@ -11,7 +11,7 @@ flutter run
 
 ## Features
 
-- Null-safe Product.fromJson with numeric conversion through num.toDouble(). API prices are displayed in USD.
+- Null-safe Product.fromJson with numeric conversion through num.toDouble(). Prices are displayed in tenge (54 990 ₸).
 - HTTP GET with a 10-second timeout, distinct 404/server/connection/invalid JSON errors.
 - Loading, success and error states, Retry Connection, pull-to-refresh and refreshable empty state.
 - ListView.separated with thumbnails, ratings and review counts.
@@ -21,7 +21,7 @@ flutter run
 
 ## API limitation
 
-Fake Store API supplies only one image per product. The three carousel pages show the original, a close-up and a detail crop of that same image. They are not three different product photographs. The share sheet generates and copies the requested URI; registering the URI with the OS and receiving external links is outside this assignment's share-sheet requirement.
+The JSON supplies one image per product (`image`). The three carousel pages show the original, a close-up and a detail crop of that same image. They are not three different product photographs. The share sheet generates and copies the requested URI; registering the URI with the OS and receiving external links is outside this assignment's share-sheet requirement.
 
 ## Verification
 

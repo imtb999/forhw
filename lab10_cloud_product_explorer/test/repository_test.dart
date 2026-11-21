@@ -10,7 +10,7 @@ void main() {
     final repository = ProductRepository(
       client: MockClient((request) async {
         expect(request.method, 'GET');
-        expect(request.url.toString(), 'https://fakestoreapi.com/products');
+        expect(request.url.toString(), ProductRepository.productsUrl);
         return http.Response('[{"id":1,"price":15,"title":"Bag"}]', 200);
       }),
     );

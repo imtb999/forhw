@@ -13,6 +13,10 @@ class ProductRequestException implements Exception {
 }
 
 class ProductRepository {
+  /// Sneaker catalog served as JSON from this repository (GitHub raw).
+  static const productsUrl =
+      'https://raw.githubusercontent.com/imtb999/forhw/main/lab10_cloud_product_explorer/api/products.json';
+
   ProductRepository({
     http.Client? client,
     this.timeout = const Duration(seconds: 10),
@@ -23,7 +27,7 @@ class ProductRepository {
   Future<List<Product>> fetchProducts() async {
     try {
       final response = await _client
-          .get(Uri.parse('https://fakestoreapi.com/products'))
+          .get(Uri.parse(productsUrl))
           .timeout(timeout);
       if (response.statusCode != 200) {
         throw ProductRequestException(switch (response.statusCode) {
